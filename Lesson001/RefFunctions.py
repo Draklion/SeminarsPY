@@ -1,5 +1,4 @@
 def Filling_One_dimensional_Array(count):
-
     Filled_Array = []
     for i in range(count):
         number = int(input())
