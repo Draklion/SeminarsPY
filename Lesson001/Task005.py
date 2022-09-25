@@ -1,10 +1,7 @@
 print("Задание 5. Программа, которая проверяет истиность утверждения !(X or Y or Z)=!X and !Y and !Z.")
 
-X = int(input("Введите значение 0 или 1 для переменной X: "))
-Y = int(input("Введите значение 0 или 1 для переменной Y: "))
-Z = int(input("Введите значение 0 или 1 для переменной Z: "))
-
-if not (X or Y or Z) == (not X and not Y and not Z):
-    print("Утверждение истино")
-else:
-    print("Утверждение не истино")
+for X in range(2):
+    for Y in range(2):
+        for Z in range(2):
+            if not (X or Y or Z) == (not X and not Y and not Z):
+                print(X, Y, Z)

@@ -1,8 +1,6 @@
 def Filling_One_dimensional_Array(count):
-    Filled_Array = []
-    for i in range(count):
-        number = int(input())
-        Filled_Array.append(number)
+
+    Filled_Array = [int(input()) for i in range(count)]
     return Filled_Array
 
 
