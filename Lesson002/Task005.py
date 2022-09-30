@@ -7,4 +7,4 @@ for i in range(len(a)):
         continue
     else:
         sum = sum + int(a[i])
-print(sum)
+print(f"Cумма цифр чисел: {sum}")
