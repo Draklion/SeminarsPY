@@ -1,4 +1,6 @@
+from csv import list_dialects
 import random
+from typing import List
 
 
 def Filling_One_Dimensional_Array(count):
@@ -28,3 +30,12 @@ def Filling_One_Dimensional_Array_Random(number_elements):
         random_array.append(random.randrange(20))
     print(f"Исходный список: {random_array}")
     return random_array
+
+
+def Filling_One_Dimensional_Array_Random_String_In_File(path_to_file: str, quantity: int):
+    file_list = " ".join(open(path_to_file).readlines()).split(' ')
+    result_list = []
+    for i in range(quantity):
+        result_list.append(random.choice(file_list))
+    comparison_string = random.choice(file_list)
+    return [result_list, comparison_string]
