@@ -1,5 +1,5 @@
 from RefFunctions import Filling_One_Dimensional_Array_Random as F_O_D_A_R
-print("Задание 3. Программа, которая преобразовывает десятичное число в двоичное.")
+print("Задание 4. Программа, которая находит сумму элементов списка, стоящих на нечётных позициях.")
 number = int(input("Введите число: "))
 number_list = F_O_D_A_R(number)
 sum = 0
