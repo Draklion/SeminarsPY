@@ -29,13 +29,27 @@ def Filling_One_Dimensional_Array_Random(number_elements):
     for i in range(0, number_elements):
         random_array.append(random.randrange(20))
     print(f"Исходный список: {random_array}")
+
     return random_array
 
 
 def Filling_One_Dimensional_Array_Random_String_In_File(path_to_file: str, quantity: int):
-    file_list = " ".join(open(path_to_file).readlines()).split(' ')
+    file_data = open(path_to_file)
+    file_list = " ".join(file_data.readlines()).split(' ')
+    file_data.close()
     result_list = []
     for i in range(quantity):
         result_list.append(random.choice(file_list))
     comparison_string = random.choice(file_list)
+
     return [result_list, comparison_string]
+
+
+def Translating_Numbers(number, numberb=" "):
+    if (number <= 0):
+        print(f"Число в двоичной системе счисления: {numberb}")
+        return numberb
+
+    else:
+        numberb = str(number % 2) + numberb
+        Translating_Numbers(number // 2, numberb)
