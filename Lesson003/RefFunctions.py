@@ -1,6 +1,7 @@
 from csv import list_dialects
 import random
 from typing import List
+from math import modf
 
 
 def Filling_One_Dimensional_Array(count):
@@ -33,6 +34,21 @@ def Filling_One_Dimensional_Array_Random(number_elements):
     return random_array
 
 
+def Filling_One_Dimensional_Array_Random_Float(number_elements):
+    random_array = []
+    for i in range(0, number_elements):
+        random_array.append(round(random.uniform(10.0, 50.0), 2))
+    print(f"Исходный список: {random_array}")
+    return random_array
+
+
+def Sorting_Exception_Whole(numbers_list):
+    numbers_list_result = []
+    for i in range(len(numbers_list)):
+        numbers_list_result.append(round(modf(numbers_list[i])[0], 2))
+    return numbers_list_result
+
+
 def Filling_One_Dimensional_Array_Random_String_In_File(path_to_file: str, quantity: int):
     file_data = open(path_to_file)
     file_list = " ".join(file_data.readlines()).split(' ')
@@ -49,7 +65,10 @@ def Translating_Numbers(number, numberb=" "):
     if (number <= 0):
         print(f"Число в двоичной системе счисления: {numberb}")
         return numberb
-
     else:
         numberb = str(number % 2) + numberb
         Translating_Numbers(number // 2, numberb)
+
+
+def Element_Remove(number):
+    return modf(number)

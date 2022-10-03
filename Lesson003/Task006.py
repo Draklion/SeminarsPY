@@ -2,7 +2,7 @@ print("Задание 6. Программа, которая составляет
 
 number = int(input("Введите число: "))
 if number <= 1:
-    print("")
+    print("Вы ввели некорректное значение.")
 else:
     firstNumberFibonacci = 0
     secondNumberFibonacci = 1
