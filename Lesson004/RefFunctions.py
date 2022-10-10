@@ -12,3 +12,11 @@ def Sort_Array_Min(source_array):
         if int(source_array[i]) < min:
             min = int(source_array[i])
     return min
+
+
+def Request_Data(number):
+    value_A = int(input("Введите значение А: "))
+    value_B = int(input("Введите значение В: "))
+    value_C = int(input("Введите значение С: "))
+
+    return
