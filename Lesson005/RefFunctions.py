@@ -1,5 +1,6 @@
 import random
 import codecs
+import re
 
 
 def Filling_One_Dimensional_Array_Random_String_In_File(path_to_file: str, quantity: int):
@@ -24,4 +25,12 @@ def Archiver(path_to_file: str, quantity: int):
             full_str = f"{full_str}{count}{current_str}"
             current_str = current_string[i]
             count = 1
+
     return full_str
+
+
+def Unarchiver(path_to_file):
+    s1 = re.sub("[^-0-9]", " ", "".join(open(path_to_file).readlines()[0]))
+    result = re.split(' ', s1)
+
+    return result
