@@ -30,7 +30,14 @@ def Archiver(path_to_file: str, quantity: int):
 
 
 def Unarchiver(path_to_file):
-    s1 = re.sub("[^-0-9]", " ", "".join(open(path_to_file).readlines()[0]))
-    result = re.split(' ', s1)
+    result_list = ""
+    result_list_1 = re.split(' ', re.sub(
+        "[^-0-9]", " ", "".join(open(path_to_file).readlines())))
+    result_list_2 = re.split(' ', re.sub(
+        "[^A-z]", " ", "".join(open(path_to_file).readlines())))
+    result_list_1 = list(filter(None, result_list_1))
+    result_list_2 = list(filter(None, result_list_2))
+    result_list = [
+        f"{result_list}{int(result_list_1[i]) * result_list_2[i]}" for i in range(len(result_list_1))]
 
-    return result
+    return result_list
