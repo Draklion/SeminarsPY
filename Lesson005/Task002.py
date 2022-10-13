@@ -1,7 +1,3 @@
-from math import radians
-from operator import le
-
-
 print("Задание 2. Программа,  реализует модуль сжатия и восстановления данных.")
 first_string = open("text_words.txt").readlines()[:2]
 count = 1
