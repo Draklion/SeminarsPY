@@ -1,14 +1,6 @@
+from RefFunctions import asdf
 print("Задание 2. Программа,  реализует модуль сжатия и восстановления данных.")
-first_string = open("text_words.txt").readlines()[:2]
-count = 1
-for i in range(len(first_string[0])):
-    current_string = str(first_string[0][0:len(first_string[0])-1])
-    print(current_string)
-    current_str = current_string[0]
-    for i in range(0, len(current_string)):
-        if current_string[i] == current_str:
-            count += 1
-        else:
-            current_str == current_string[i]
-            count = 1
-    print(count, current_str)
+path_to_file = "text_words.txt"
+text_code_words = open("text_code_words.txt", "w")
+for i in range(2):
+    text_code_words.write(f"{asdf(path_to_file, i)}\n")
