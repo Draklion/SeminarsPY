@@ -11,7 +11,7 @@ def Filling_One_Dimensional_Array_Random_String_In_File(path_to_file: str, quant
     return result_list
 
 
-def asdf(path_to_file: str, quantity: int):
+def Archiver(path_to_file: str, quantity: int):
     first_string = open(path_to_file).readlines()
     count = 1
     current_string = str(first_string[quantity][0:len(first_string[quantity])])
