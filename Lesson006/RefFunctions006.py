@@ -12,3 +12,14 @@ def Сomparison(path_to_file):
     else:
         result_list
     return result_list
+
+
+def Filling_One_Dimensional_List(count):
+    filled_list = [i for i in range(20, count+1)]
+    return filled_list
+
+
+def Сalculations(current_list):
+    result_list = [current_list[i]
+                   for i in range(len(current_list)) if int(current_list[i]) % 20 == 0 or int(current_list[i]) % 21 == 0]
+    return result_list
