@@ -30,10 +30,7 @@ def Dictionary_Names(path_to_file):
     current_list = "".join(
         open(path_to_file, "r", encoding="utf-8").readlines()).split()
     current_list.sort()
-    print(current_list)
-    result_list = list(set([current_list[i][0]
-                       for i in range(0, len(current_list))]))
-    result_list.sort()
+    print(f"Исходный список: {current_list}")
     result_dictionary = {}
     for i in current_list:
         if i[0] in result_dictionary:
