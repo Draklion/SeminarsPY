@@ -1,4 +1,5 @@
 from random import randint
+from unittest import result
 
 
 def Сomparison(path_to_file):
@@ -23,3 +24,21 @@ def Сalculations(current_list):
     result_list = [current_list[i]
                    for i in range(len(current_list)) if int(current_list[i]) % 20 == 0 or int(current_list[i]) % 21 == 0]
     return result_list
+
+
+def Dictionary_Names(path_to_file):
+    current_list = "".join(
+        open(path_to_file, "r", encoding="utf-8").readlines()).split()
+    current_list.sort()
+    print(current_list)
+    result_list = list(set([current_list[i][0]
+                       for i in range(0, len(current_list))]))
+    result_list.sort()
+    result_dictionary = {}
+    for i in current_list:
+        if i[0] in result_dictionary:
+            result_dictionary[i[0]] += [i]
+        else:
+            result_dictionary[i[0]] = [i]
+
+    return result_dictionary
